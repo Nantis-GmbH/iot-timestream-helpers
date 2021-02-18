@@ -2,7 +2,7 @@ import { ColumnInfo, Datum, ScalarType } from '@aws-sdk/client-timestream-query'
 
 type ScalarTypes = boolean | Date | number | BigInt | string | undefined
 
-const parseValue = (value: string, type: ScalarType): ScalarTypes => {
+export const parseValue = (value: string, type: ScalarType): ScalarTypes => {
 	switch (type) {
 		case ScalarType.BIGINT:
 			return BigInt(value)
